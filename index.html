@@ -1,41 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="script.js"></script>
     <title>KANBAN</title>
-</head>
-<body>
-<header>
-    <h1>KANBAN</h1>
-    <nav>
-        <ol>
-            <li onclick="scrollToSection('intro')">Introdução</li>
-            <li onclick="scrollToSection('diagram')">Diagrama</li>
-            <li onclick="scrollToSection('activities')">Atividades</li>
-            <li onclick="scrollToSection('roles')">Papéis</li>
-            <li onclick="scrollToSection('practices')">Práticas</li>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header
+      class="flex justify-center items-center border-b border-black gap-[10em] py-2"
+    >
+      <h1 class="text-3xl font-bold">KANBAN</h1>
+      <nav>
+        <ol class="flex list-none gap-5">
+          <li
+            class="hover:cursor-pointer hover:text-red-600 transition-colors"
+            onclick="scrollToSection('intro')"
+          >
+            Introdução
+          </li>
+          <li
+            class="hover:cursor-pointer hover:text-red-600 transition-colors"
+            onclick="scrollToSection('diagram')"
+          >
+            Diagrama
+          </li>
+          <li
+            class="hover:cursor-pointer hover:text-red-600 transition-colors"
+            onclick="scrollToSection('activities')"
+          >
+            Atividades
+          </li>
+          <li
+            class="hover:cursor-pointer hover:text-red-600 transition-colors"
+            onclick="scrollToSection('roles')"
+          >
+            Papéis
+          </li>
+          <li
+            class="hover:cursor-pointer hover:text-red-600 transition-colors"
+            onclick="scrollToSection('practices')"
+          >
+            Práticas
+          </li>
         </ol>
-    </nav>
-</header>
+      </nav>
+    </header>
 
-<main>
-    <div id="intro">
-        <h2>Introdução</h2>
-        <p>
-            O Kanban é um método de gestão visual de trabalho criado para organizar, acompanhar e melhorar fluxos de atividades de forma contínua. Seu objetivo principal é tornar o trabalho visível, limitar o volume de tarefas em andamento e identificar gargalos no processo, promovendo maior eficiência e previsibilidade.
-            <br><br>
-            Baseado em um quadro visual (físico ou digital), o Kanban representa as etapas do fluxo de trabalho por meio de colunas, onde as atividades avançam conforme são executadas. Ao aplicar princípios como limite de trabalho em progresso (WIP), melhoria contínua e gestão do fluxo, o Kanban ajuda equipes a entregarem valor de forma mais rápida, organizada e transparente, sendo amplamente utilizado em áreas como desenvolvimento de software, operações e gestão administrativa.
+    <main
+      class="flex flex-col items-start justify-start w-1/2 mx-auto my-5 gap-5"
+    >
+      <div id="intro">
+        <h2 class="mb-5 text-2xl font-semibold">Introdução</h2>
+        <p class="font-sans">
+          O Kanban é um método de gestão visual de trabalho criado para
+          organizar, acompanhar e melhorar fluxos de atividades de forma
+          contínua. Seu objetivo principal é tornar o trabalho visível, limitar
+          o volume de tarefas em andamento e identificar gargalos no processo,
+          promovendo maior eficiência e previsibilidade.
+          <br /><br />
+          Baseado em um quadro visual (físico ou digital), o Kanban representa
+          as etapas do fluxo de trabalho por meio de colunas, onde as atividades
+          avançam conforme são executadas. Ao aplicar princípios como limite de
+          trabalho em progresso (WIP), melhoria contínua e gestão do fluxo, o
+          Kanban ajuda equipes a entregarem valor de forma mais rápida,
+          organizada e transparente, sendo amplamente utilizado em áreas como
+          desenvolvimento de software, operações e gestão administrativa.
         </p>
-    </div>
-    <div id="diagram">
-        <h2>Diagrama de atividades</h2>
+      </div>
+      <div id="diagram">
+        <h2 class="mb-5 text-2xl font-semibold">Diagrama de atividades</h2>
         <picture>
-            <img src="images/diagram.png">
+          <img
+            src="images/diagram.png"
+            class="border border-black rounded-sm"
+          />
         </picture>
-    </div>
-</main>
-</body>
+      </div>
+    </main>
+  </body>
 </html>
